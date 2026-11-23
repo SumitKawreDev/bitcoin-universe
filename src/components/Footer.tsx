@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Globe, MessageCircle, Phone, Send, Share2 } from 'lucide-react';
 import { BRAND_CONTACT, FOOTER_QUICK_LINKS, type LegalDocKey } from '../data/siteData';
+import logoImage from '../assets/logo/Bitcoin Universe_ Digital Finance Logo.png';
 
 interface FooterProps {
   onOpenLegal: (docKey: LegalDocKey) => void;
@@ -42,25 +43,11 @@ export function Footer({ onOpenLegal }: FooterProps) {
               }}
               className="inline-flex items-center gap-3"
             >
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#E8B64D]/40 bg-[#E8B64D]/10">
-                <svg viewBox="0 0 32 32" className="h-5 w-5" aria-hidden="true">
-                  <circle
-                    cx="16"
-                    cy="16"
-                    r="13"
-                    fill="none"
-                    stroke="#E8B64D"
-                    strokeWidth="1.6"
-                  />
-                  <path
-                    d="M12.5 9.6h5.2c2.2 0 3.7 1.1 3.7 2.9 0 1.3-.8 2.3-2.1 2.7 1.6.4 2.6 1.5 2.6 3.1 0 2.2-1.8 3.6-4.3 3.6h-5.1V9.6zm2.8 5h2.2c.9 0 1.5-.5 1.5-1.3s-.6-1.3-1.5-1.3h-2.2v2.6zm0 4.9h2.5c1 0 1.7-.5 1.7-1.4 0-.9-.7-1.4-1.7-1.4h-2.5v2.8z"
-                    fill="#E8B64D"
-                  />
-                </svg>
-              </span>
-              <span className="font-display text-lg font-bold tracking-[0.12em] text-white">
-                BITCOIN <span className="gold-gradient-text">UNIVERSE</span>
-              </span>
+              <img
+                src={logoImage}
+                alt="Bitcoin Universe"
+                className="h-32 w-auto max-w-[520px] object-contain object-left"
+              />
             </a>
 
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#A8B0C0]">

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 import { NAV_LINKS } from '../data/siteData';
+import logoImage from '../assets/logo/Bitcoin Universe_ Digital Finance Logo.png';
 
 interface NavbarProps {
   onOpenAuth: (mode: 'login' | 'join') => void;
@@ -68,7 +69,7 @@ export function Navbar({ onOpenAuth }: NavbarProps) {
           : 'border-b border-transparent bg-transparent'
       }`}
     >
-      <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between gap-6 px-5 sm:px-8">
+      <div className="mx-auto flex h-28 max-w-[1400px] items-center justify-between gap-6 px-5 sm:px-8">
         {/* Brand Zone */}
         <a
           href="#home"
@@ -79,32 +80,11 @@ export function Navbar({ onOpenAuth }: NavbarProps) {
           className="group flex shrink-0 items-center gap-3 whitespace-nowrap"
           aria-label="Bitcoin Universe Home"
         >
-          <span className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-[#E8B64D]/40 bg-gradient-to-br from-[#E8B64D]/20 to-[#F7931A]/10 transition-colors duration-200 group-hover:border-[#E8B64D]/80">
-            <svg viewBox="0 0 32 32" className="h-5 w-5" aria-hidden="true">
-              <defs>
-                <linearGradient id="navBtcGold" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stopColor="#F6D88C" />
-                  <stop offset="55%" stopColor="#E8B64D" />
-                  <stop offset="100%" stopColor="#F7931A" />
-                </linearGradient>
-              </defs>
-              <circle
-                cx="16"
-                cy="16"
-                r="13"
-                fill="none"
-                stroke="url(#navBtcGold)"
-                strokeWidth="1.6"
-              />
-              <path
-                d="M12.5 9.6h5.2c2.2 0 3.7 1.1 3.7 2.9 0 1.3-.8 2.3-2.1 2.7 1.6.4 2.6 1.5 2.6 3.1 0 2.2-1.8 3.6-4.3 3.6h-5.1V9.6zm2.8 5h2.2c.9 0 1.5-.5 1.5-1.3s-.6-1.3-1.5-1.3h-2.2v2.6zm0 4.9h2.5c1 0 1.7-.5 1.7-1.4 0-.9-.7-1.4-1.7-1.4h-2.5v2.8z"
-                fill="url(#navBtcGold)"
-              />
-            </svg>
-          </span>
-          <span className="font-display text-base font-bold tracking-[0.12em] text-white sm:text-lg">
-            BITCOIN <span className="gold-gradient-text">UNIVERSE</span>
-          </span>
+          <img
+            src={logoImage}
+            alt="Bitcoin Universe"
+            className="h-32 w-auto max-w-[520px] object-contain object-left"
+          />
         </a>
 
         {/* Desktop Navigation */}
