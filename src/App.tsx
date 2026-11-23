@@ -32,7 +32,7 @@ export default function App() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <div className="min-h-screen bg-[#070A12] text-white">
+      <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#070A12] text-white">
         {/* Subtle Gold Reading Progress Hairline */}
         <motion.div
           aria-hidden="true"
@@ -46,6 +46,7 @@ export default function App() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+          className="w-full max-w-full overflow-x-hidden"
         >
           <HeroSection />
           <AboutSection />

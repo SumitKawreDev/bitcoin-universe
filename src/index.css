@@ -14,7 +14,16 @@
 }
 
 @layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
   html {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
     background-color: #070A12;
     color: #FFFFFF;
     font-family: var(--font-sans);
@@ -23,10 +32,23 @@
   }
 
   body {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    min-height: 100vh;
+    margin: 0;
     background-color: #070A12;
     color: #FFFFFF;
     overflow-x: hidden;
     letter-spacing: 0.01em;
+  }
+
+  #root {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    min-height: 100vh;
+    overflow-x: clip;
   }
 
   h1, h2, h3, h4 {
@@ -131,4 +153,30 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(232, 182, 77, 0.48);
+}
+
+@media (max-width: 767px) {
+  html,
+  body,
+  #root,
+  #root > div,
+  main,
+  section,
+  footer,
+  header {
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  main,
+  section,
+  footer,
+  header {
+    min-width: 0;
+  }
+
+  section,
+  footer {
+    overflow-x: clip;
+  }
 }

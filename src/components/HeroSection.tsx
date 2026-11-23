@@ -35,7 +35,7 @@ export function HeroSection() {
     <section
       id="home"
       ref={sectionRef}
-      className="relative flex min-h-[96vh] w-full items-center overflow-hidden bg-[#070A12] pt-24 pb-16 lg:min-h-screen lg:pt-28 lg:pb-20"
+      className="relative flex min-h-[96vh] w-full max-w-full items-center overflow-hidden bg-[#070A12] pt-24 pb-16 lg:min-h-screen lg:pt-28 lg:pb-20"
     >
       {/* Full-bleed Cinematic Background Visual with Subtle Parallax */}
       <motion.div
@@ -71,7 +71,7 @@ export function HeroSection() {
       />
 
       {/* Main Hero Container */}
-      <div className="relative z-10 mx-auto grid w-full max-w-[1400px] grid-cols-1 items-center gap-12 px-5 sm:px-8 lg:grid-cols-12 lg:gap-10">
+      <div className="relative z-10 mx-auto grid w-full min-w-0 max-w-[1400px] grid-cols-1 items-center gap-12 px-5 sm:px-8 lg:grid-cols-12 lg:gap-10">
         {/* Left Content Column */}
         <div className="lg:col-span-7">
           {/* Clean Unboxed Kicker (Zero-Pill Discipline) */}
